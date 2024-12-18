@@ -7,7 +7,7 @@ using System.Collections;
 using PlayFab.ClientModels;
 using PlayFab;
 
-
+//commento 
 public class VeroFalsoManager : MonoBehaviour
 {
     public QtsData[] categories;
@@ -59,7 +59,7 @@ public class VeroFalsoManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SelectCategory(0); //comincia il gioco con la  categoria di domande di difficlt‡ 1
+        SelectCategory(0); //comincia il gioco con la  categoria di domande di difficlt√† 1
         fineGiocoPanel.SetActive(false);
         SwitchBottone.GetComponent<Image>().color = colorbottone; //imposta i bottoni al colore originale
         aiutoPubblicoBottone.GetComponent<Image>().color = colorbottone;
@@ -200,7 +200,7 @@ public class VeroFalsoManager : MonoBehaviour
                 Panels[panelAttivoIndex].GetComponent<Image>().color = Color.green;
             }
 
-            // Cambia il colore del pannello corrente in bianco trasparente, se non Ë il primo
+            // Cambia il colore del pannello corrente in bianco trasparente, se non √® il primo
             if (panelAttivoIndex > 0)
             {
                 Panels[panelAttivoIndex - 1].GetComponent<Image>().color = biancoTrasparente;
@@ -273,7 +273,7 @@ public class VeroFalsoManager : MonoBehaviour
         numDomande = 7; //fatto per cambiare la domanda con una della stessa categoria
         timer.GetComponent<TimerScript>().ResetTimer(30);
         DisplayQuestion(counterCategory);
-        SwitchBottone.interactable = false; //si puÚ usare solo una volta lo switch
+        SwitchBottone.interactable = false; //si pu√≤ usare solo una volta lo switch
         SwitchBottone.GetComponent<Image>().color = colorInactive;
     }
 
@@ -288,7 +288,7 @@ public class VeroFalsoManager : MonoBehaviour
     IEnumerator MostraAiutoPanel() //fa uscire per 4 secondi l'aiuto dal pubblico
     {
         aiutoPubblicoPanel.SetActive(true);
-        aiutoPubblcotext.text = "secondo il pubblico la risposta giusta Ë:";
+        aiutoPubblcotext.text = "secondo il pubblico la risposta giusta √®:";
         // Nascondi tutte le immagini all'inizio
         foreach (var img in immaginiGruppo0) img.SetActive(false);
         foreach (var img in immaginiGruppo1) img.SetActive(false);
